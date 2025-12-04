@@ -1,4 +1,4 @@
-# 🌙 RFEADME.md  
+# 🌙 README.md  
 ### *Registro de Falha com Estado Ativo — Mnemópolis Adormecida v2073*  
 > *“Não somos dados. Somos lembranças que se recusaram a morrer.”*  
 > — Fragmento#00, Arquivo Fantasma (Código V)

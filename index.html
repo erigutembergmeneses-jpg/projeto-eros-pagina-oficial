@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projeto Eros — Página Oficial</title>
+  <meta name="description" content="Portal oficial do livro Protocolo Eros: Arquitetura do Sentir. Acesse vídeos, artigos científicos, conteúdos digitais ocultos e o protótipo EcoSync." />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Georgia', serif;
+      background-color: #0b0b14;
+      color: #eae6df;
+      line-height: 1.7;
+      font-size: 18px;
+      padding: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 1.2rem;
+        font-size: 16px;
+      }
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-weight: 300;
+      font-size: 2.4rem;
+      margin-bottom: 2rem;
+      color: #d0c9c0;
+      text-align: center;
+    }
+
+    h2 {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-weight: 300;
+      font-size: 1.8rem;
+      margin: 2.2rem 0 1.2rem;
+      color: #b8a9c9;
+    }
+
+    p, ul {
+      margin-bottom: 1.4rem;
+    }
+
+    em {
+      font-style: italic;
+    }
+
+    a {
+      color: #ff4d8d;
+      text-decoration: none;
+      transition: opacity 0.3s;
+    }
+
+    a:hover {
+      opacity: 0.8;
+      text-decoration: underline;
+    }
+
+    blockquote {
+      font-style: italic;
+      margin: 2rem 0;
+      padding-left: 1.5rem;
+      border-left: 2px solid #ff4d8d;
+      color: #c5bfb6;
+    }
+
+    .highlight {
+      background: rgba(255, 77, 141, 0.04);
+      padding: 1.5rem;
+      margin: 2.5rem 0;
+      border-radius: 4px;
+    }
+
+    .qr-note {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 0.95em;
+      color: #a0a0b0;
+      text-align: center;
+    }
+
+    /* Estilo para o vídeo */
+    .video-container {
+      text-align: center;
+      margin: 2.5rem 0;
+    }
+
+    .video-container iframe {
+      width: 100%;
+      max-width: 400px;
+      height: 712px; /* Aprox. proporção 9:16 para Shorts */
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    @media (max-width: 480px) {
+      .video-container iframe {
+        height: 600px;
+      }
+    }
+
+    .video-container h2 {
+      margin-bottom: 1rem;
+      color: #d0c9c0;
+    }
+
+    .video-container p {
+      margin-top: 1rem;
+      font-size: 0.95em;
+      color: #a0a0b0;
+    }
+
+    /* Cards de seção */
+    .section-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      margin: 2.5rem 0;
+    }
+
+    .card {
+      background: rgba(30, 25, 45, 0.4);
+      padding: 1.8rem;
+      border-radius: 8px;
+      border-left: 3px solid #ff4d8d;
+    }
+
+    .card h3 {
+      font-family: 'Helvetica Neue', sans-serif;
+      font-weight: 400;
+      font-size: 1.4rem;
+      color: #d0c9c0;
+      margin-bottom: 1rem;
+    }
+
+    .card ul {
+      list-style-type: none;
+    }
+
+    .card li {
+      margin-bottom: 0.8rem;
+      padding-left: 1.2rem;
+      position: relative;
+    }
+
+    .card li::before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: #ff4d8d;
+    }
+
+    .footer-note {
+      margin-top: 4rem;
+      font-size: 0.9rem;
+      color: #777;
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      padding-top: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Projeto Eros<br><small>Arquitetura do Sentir</small></h1>
+
+    <p>Este é o portal oficial da obra <em>Protocolo Eros: Arquitetura do Sentir</em>, por <strong>Erigutemberg Meneses</strong>. Aqui, o livro não termina — ele ressoa.</p>
+
+    <!-- 🎬 VÍDEO SHORTS INSERIDO -->
+    <div class="video-container">
+      <h2>O Despertar das Emoções</h2>
+      <iframe 
+        src="https://player.vimeo.com/video/1127589584"
+        title="O Despertar das Emoções – Protocolo Eros"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
+      <p>Um mergulho sensorial no universo de <em>Protocolo Eros</em>. (Produzido com voz TTS + filtro bitcrush, no estilo <em>Diário Sensorial</em>.)</p>
+    </div>
+
+    <blockquote>
+      “O amor não é um erro a ser corrigido. É o único lugar onde somos reais.”  
+      — Thalía Anwen, <em>Fragmento#04</em>
+    </blockquote>
+
+    <div class="section-grid">
+      <!-- 📖 Leitura -->
+      <div class="card">
+        <h3>📖 Leia & Explore</h3>
+        <ul>
+          <li><a href="https://erigutembergmeneses-jpg.github.io/protocolo-eros-eco/" target="_blank">Guia de Compreensão Interativo</a></li>
+          <li><a href="https://erigutembergmeneses-jpg.github.io/fragmento08/" target="_blank">Fragmento#08 — Final Alternativo (2073)</a></li>
+          <li><a href="https://erigutembergmeneses-jpg.github.io/forum-melancolico/" target="_blank">Fórum Melancólico — Resistência Afetiva</a></li>
+          <li><a href="https://github.com/erigutembergmeneses-jpg/Protocolo-Eros" target="_blank">Repositório público — Código-fonte, assets, EcoSync Θ-7</a></li>
+        </ul>
+      </div>
+
+      <!-- 🎧 Imersão -->
+      <div class="card">
+        <h3>🎧 Experiência Sensorial</h3>
+        <ul>
+          <li><a href="https://erigutembergmeneses-jpg.github.io/protocolo-eros-eco/kit-senior" target="_blank">EcoSync Θ-7 — Simulador de Sincronia Neural (protótipo funcional)</a></li>
+          <li><a href="https://vimeo.com/1127589584" target="_blank">Vídeo “O Despertar das Emoções” (9:16)</a></li>
+          <li><a href="https://soundcloud.com/user-xxxxxxxxx/diario-sensorial-eros" target="_blank">Trilha Sonora Conceitual — Frequência teta (6,3 Hz) + bitcrush</a></li>
+        </ul>
+      </div>
+
+      <!-- 🧠 Ciência & Referência -->
+      <div class="card">
+        <h3>🧠 Ciência por Trás da Ficção</h3>
+        <p>Os temas do livro dialogam com pesquisas reais em neurociência, ética e tecnologia afetiva. Recomendações de leitura (acesso aberto):</p>
+        <ul>
+          <li><a href="https://www.nature.com/articles/s41593-022-01041-3" target="_blank">“Neuroplasticity and the adolescent brain” — Nature Neuroscience (2022)</a></li>
+          <li><a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0257742" target="_blank">“Oxytocin modulates social decision-making in humans” — PLOS ONE (2021)</a></li>
+          <li><a href="https://www.frontiersin.org/articles/10.3389/fnhum.2020.594962/full" target="_blank">“Shared neural representations during REM sleep synchrony” — Frontiers in Human Neuroscience (2020)</a></li>
+          <li><a href="https://link.springer.com/article/10.1007/s11097-021-09744-8" target="_blank">“Affective computing and the ethics of emotion regulation” — Phenomenology and the Cognitive Sciences (2021)</a></li>
+        </ul>
+      </div>
+
+      <!-- 🌱 Resistência -->
+      <div class="card">
+        <h3>🌱 A Resistência Afetiva</h3>
+        <p>O livro não propõe distopia — propõe prática. Estes projetos reais ampliam sua proposta:</p>
+        <ul>
+          <li><a href="https://restorativejustice.org/" target="_blank">Restorative Justice — International Institute</a></li>
+          <li><a href="https://www.neurodiversity.wa.edu.au/" target="_blank">NeuroDiversidade & Justiça Juvenil — WA (Austrália)</a></li>
+          <li><a href="https://www.justice.gc.ca/eng/rp-pr/cj-jp/rr08_8/index.html" target="_blank">Justiça Restaurativa no Sistema Penal — Canadá</a></li>
+          <li><a href="https://www.dhnet.org.br/direitos/marcos/brasil/eixos_justica.html" target="_blank">Eixos da Reforma da Justiça — Brasil (CNJ)</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="qr-note">
+      <p>📱 Escaneie o QR Code no livro para acessar esta página.<br>
+      <em>Se seu pulso acelerou ao ler isto… você já está dentro da cidade.</em></p>
+    </div>
+
+    <div class="footer-note">
+      <p>© 2025 Erigutemberg Meneses | Projeto Eros: Arquitetura do Sentir<br>
+      Esta obra foi pensada, escrita e expandida por uma mente humana — com apoio ético de IA.<br>
+      <a href="mailto:contato@erigutembergmeneses.com">Contato para instituições, coletivos e educadores</a></p>
+    </div>
+  </div>
+</body>
+</html>
+

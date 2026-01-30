@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Projeto Eros — Página Oficial</title>
-  <meta name="description" content="Portal oficial do livro Protocolo Eros: Arquitetura do Sentir. Acesse vídeos, artigos científicos, conteúdos digitais ocultos e o protótipo EcoSync." />
+  <title>Protocolo Eros — Arquitetura do Sentir</title>
+  <meta name="description" content="Portal oficial do livro Protocolo Eros: Arquitetura do Sentir. Acesse trilha sonora, fragmentos ocultos, vídeos imersivos e o guia interativo do universo de Mnemópolis." />
   <style>
     * {
       margin: 0;
@@ -47,20 +47,39 @@
     }
 
     .container {
-      max-width: 800px;
+      max-width: 1000px;
       margin: 0 auto;
       position: relative;
       z-index: 1;
     }
 
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid rgba(255, 77, 141, 0.2);
+    }
+
     h1 {
       font-family: 'Helvetica Neue', Arial, sans-serif;
       font-weight: 300;
-      font-size: 2.4rem;
-      margin-bottom: 2rem;
-      color: #d0c9c0;
-      text-align: center;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      font-size: 2.8rem;
+      margin-bottom: 0.5rem;
+      color: #e0d6ff;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+      letter-spacing: 1px;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      color: #b8a9c9;
+      margin-bottom: 1.5rem;
+      font-style: italic;
+    }
+
+    .author {
+      color: #a095b5;
+      font-size: 1rem;
     }
 
     h2 {
@@ -68,8 +87,17 @@
       font-weight: 300;
       font-size: 1.8rem;
       margin: 2.2rem 0 1.2rem;
-      color: #b8a9c9;
+      color: #d0c9c0;
       text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    }
+
+    h3 {
+      font-family: 'Helvetica Neue', sans-serif;
+      font-weight: 400;
+      font-size: 1.4rem;
+      color: #d0c9c0;
+      margin-bottom: 1rem;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     }
 
     p, ul {
@@ -83,7 +111,7 @@
     a {
       color: #ff4d8d;
       text-decoration: none;
-      transition: opacity 0.3s;
+      transition: all 0.3s;
     }
 
     a:hover {
@@ -108,16 +136,159 @@
       backdrop-filter: blur(5px);
     }
 
-    .qr-note {
-      margin-top: 3rem;
-      padding-top: 2rem;
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
-      font-size: 0.95em;
-      color: #a0a0b0;
-      text-align: center;
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    /* Seção de QR Codes */
+    .qr-portal {
+      margin: 3rem 0;
+      padding: 2rem;
+      background: rgba(20, 15, 35, 0.7);
+      border-radius: 12px;
+      border: 1px solid rgba(255, 77, 141, 0.1);
     }
 
+    .qr-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .qr-card {
+      background: rgba(30, 25, 45, 0.8);
+      padding: 1.5rem;
+      border-radius: 8px;
+      border-left: 3px solid #ff4d8d;
+      backdrop-filter: blur(5px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s;
+    }
+
+    .qr-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .qr-card img {
+      width: 120px;
+      height: 120px;
+      display: block;
+      margin: 0 auto 1rem;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      background: white;
+      padding: 8px;
+    }
+
+    .qr-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.8rem;
+      color: #e0d6ff;
+    }
+
+    .qr-card p {
+      font-size: 0.95rem;
+      color: #b0a8c0;
+      margin-bottom: 1rem;
+      min-height: 60px;
+    }
+
+    .qr-card .qr-link {
+      display: inline-block;
+      background: rgba(255, 77, 141, 0.1);
+      color: #ff4d8d;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      border: 1px solid rgba(255, 77, 141, 0.3);
+      font-size: 0.9rem;
+    }
+
+    .qr-card .qr-link:hover {
+      background: rgba(255, 77, 141, 0.2);
+      text-decoration: none;
+    }
+
+    /* Player de áudio */
+    .audio-player {
+      background: rgba(30, 25, 45, 0.8);
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin: 2rem 0;
+      border-left: 3px solid #7037b4;
+    }
+
+    .audio-player h3 {
+      color: #b8a9c9;
+    }
+
+    /* Linha do tempo */
+    .timeline {
+      margin: 3rem 0;
+      position: relative;
+      padding-left: 2rem;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, #ff4d8d, #7037b4);
+    }
+
+    .timeline-item {
+      margin-bottom: 2rem;
+      position: relative;
+      padding-left: 1.5rem;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -0.5rem;
+      top: 0.5rem;
+      width: 1rem;
+      height: 1rem;
+      background: #ff4d8d;
+      border-radius: 50%;
+    }
+
+    .timeline-year {
+      font-weight: bold;
+      color: #ff4d8d;
+    }
+
+    /* Glossário */
+    .glossary {
+      margin: 3rem 0;
+    }
+
+    .glossary-item {
+      background: rgba(30, 25, 45, 0.6);
+      margin-bottom: 1rem;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .glossary-term {
+      padding: 1rem;
+      background: rgba(255, 77, 141, 0.1);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .glossary-term:hover {
+      background: rgba(255, 77, 141, 0.15);
+    }
+
+    .glossary-definition {
+      padding: 1rem;
+      display: none;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    /* Vídeo */
     .video-container {
       text-align: center;
       margin: 2.5rem 0;
@@ -142,16 +313,15 @@
     .video-container h2 {
       margin-bottom: 1rem;
       color: #d0c9c0;
-      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
     }
 
     .video-container p {
       margin-top: 1rem;
       font-size: 0.95em;
       color: #a0a0b0;
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     }
 
+    /* Grid de seções */
     .section-grid {
       display: grid;
       grid-template-columns: 1fr;
@@ -166,15 +336,6 @@
       border-left: 3px solid #ff4d8d;
       backdrop-filter: blur(5px);
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    }
-
-    .card h3 {
-      font-family: 'Helvetica Neue', sans-serif;
-      font-weight: 400;
-      font-size: 1.4rem;
-      color: #d0c9c0;
-      margin-bottom: 1rem;
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     }
 
     .card ul {
@@ -194,6 +355,16 @@
       color: #ff4d8d;
     }
 
+    /* Notas finais */
+    .qr-note {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 0.95em;
+      color: #a0a0b0;
+      text-align: center;
+    }
+
     .footer-note {
       margin-top: 4rem;
       font-size: 0.9rem;
@@ -201,16 +372,54 @@
       text-align: center;
       border-top: 1px solid rgba(255, 255, 255, 0.05);
       padding-top: 1.5rem;
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+      
+      .qr-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .video-container iframe {
+        max-width: 100%;
+        height: 500px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 1rem;
+      }
+      
+      h1 {
+        font-size: 1.8rem;
+      }
+      
+      .video-container iframe {
+        height: 400px;
+      }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Projeto Eros<br><small>Arquitetura do Sentir</small></h1>
+    <header>
+      <h1>Protocolo Eros</h1>
+      <div class="subtitle">Arquitetura do Sentir</div>
+      <div class="author">por Erigutemberg Meneses</div>
+      <p>Este é o portal oficial da obra <em>Protocolo Eros: Arquitetura do Sentir</em>. Aqui, o livro não termina — ele ressoa.</p>
+    </header>
 
-    <p>Este é o portal oficial da obra <em>Protocolo Eros: Arquitetura do Sentir</em>, por <strong>Erigutemberg Meneses</strong>. Aqui, o livro não termina — ele ressoa.</p>
+    <blockquote>
+      "O amor não é um erro a ser corrigido. É o único lugar onde somos reais."  
+      <br>— Thalía Anwen, <em>Fragmento#04</em>
+    </blockquote>
 
+    <!-- Seção de Vídeo -->
     <div class="video-container">
       <h2>O Despertar das Emoções</h2>
       <iframe 
@@ -224,58 +433,109 @@
       <p>Um mergulho sensorial no universo de <em>Protocolo Eros</em>. (Produzido com voz TTS + filtro bitcrush, no estilo <em>Diário Sensorial</em>.)</p>
     </div>
 
-    <blockquote>
-      “O amor não é um erro a ser corrigido. É o único lugar onde somos reais.”  
-      — Thalía Anwen, <em>Fragmento#04</em>
-    </blockquote>
+    <!-- Portal de QR Codes -->
+    <section class="qr-portal">
+      <h2>🔗 Portal de QR Codes do Livro</h2>
+      <p>Todos os códigos QR presentes no livro reunidos em um só lugar. Clique para acessar ou escaneie diretamente da tela.</p>
 
-    <div class="section-grid">
-      <div class="card">
-        <h3>📖 Leia & Explore</h3>
-        <ul>
-          <li><a href="https://erigutembergmeneses-jpg.github.io/protocolo-eros-eco/" target="_blank">Guia de Compreensão Interativo</a></li>
-          <li><a href="https://erigutembergmeneses-jpg.github.io/fragmento08/" target="_blank">Fragmento#08 — Final Alternativo (2073)</a></li>
-          <li><a href="https://erigutembergmeneses-jpg.github.io/forum-melancolico/" target="_blank">Fórum Melancólico — Resistência Afetiva</a></li>
-        </ul>
-      </div>
+      <div class="qr-grid">
+        <!-- Trilha Sonora -->
+        <div class="qr-card">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://soundcloud.com/erigutemberg-meneses/sets/trilha-sonora-conceitual" alt="QR Code Trilha Sonora">
+          <h3>🎵 CD Protocolo Eros</h3>
+          <p>Trilha sonora instrumental gerada por IA. Ouça antes de ler.</p>
+          <a href="https://soundcloud.com/erigutemberg-meneses/sets/trilha-sonora-conceitual" target="_blank" class="qr-link">Acessar Trilha</a>
+        </div>
 
-      <div class="card">
-        <h3>🎧 Experiência Sensorial</h3>
-        <ul>
-          <li><a href="https://vimeo.com/1127589584" target="_blank">Vídeo “O Despertar das Emoções” (9:16)</a></li>
-          <li><a href="https://soundcloud.com/erigutemberg-meneses/sets/trilha-sonora-conceitual" target="_blank">Trilha Sonora Conceitual — Frequência teta (6,3 Hz) + bitcrush</a></li>
-        </ul>
-      </div>
+        <!-- Fragmento #08 -->
+        <div class="qr-card">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://erigutembergmeneses-jpg.github.io/fragmento08/" alt="QR Code Fragmento #08">
+          <h3>📄 Fragmento #08</h3>
+          <p>Final alternativo situado em 2073. Continuação simbólica da história.</p>
+          <a href="https://erigutembergmeneses-jpg.github.io/fragmento08/" target="_blank" class="qr-link">Ler Fragmento</a>
+        </div>
 
-      <div class="card">
-        <h3>🧠 Ciência por Trás da Ficção</h3>
-        <p>Os temas do livro dialogam com pesquisas reais em neurociência, ética e tecnologia afetiva. Recomendações de leitura (acesso aberto):</p>
-        <ul>
-          <li><a href="https://www.sciencedirect.com/science/article/pii/S1878929324001476" target="_blank">“Puberty initiates significant neurobiological changes…” — Developmental Cognitive Neuroscience (2024)</a></li>
-          <li><a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0257742" target="_blank">“Oxytocin modulates social decision-making in humans” — PLOS ONE (2021)</a></li>
-          <li><a href="https://academic.oup.com/sleepadvances/article/6/1/zpaf004/7972492" target="_blank">“REM refines and rescues memory representations” — SLEEP Advances (2025)</a></li>
-        </ul>
-      </div>
+        <!-- Mnemópolis: Duas Faces -->
+        <div class="qr-card">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://www.youtube.com/watch?v=YYqysl2IEpw" alt="QR Code Vídeo Mnemópolis">
+          <h3>🎥 Mnemópolis: Duas Faces</h3>
+          <p>Vídeo sobre a cidade da Vigília e a Adormecida. Aponte a câmera e revele.</p>
+          <a href="https://www.youtube.com/watch?v=YYqysl2IEpw" target="_blank" class="qr-link">Assistir Vídeo</a>
+        </div>
 
-      <div class="card">
-        <h3>🌱 A Resistência Afetiva</h3>
-        <p>O livro não propõe distopia — propõe prática. Estes projetos reais ampliam sua proposta:</p>
-        <ul>
-          <li><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5819044" target="_blank">Neurocompatible Justice: An Evidence-Based Institutional Model for Humanized Criminal Policy – Erigutemberg Meneses</a></li>
-          <li><a href="https://restorativejustice.org/" target="_blank">Restorative Justice — International Institute</a></li>
-        </ul>
+        <!-- Guia Interativo -->
+        <div class="qr-card">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://erigutembergmeneses-jpg.github.io/protocolo-eros-eco/" alt="QR Code Guia Interativo">
+          <h3>🧭 Guia de Compreensão</h3>
+          <p>Explore camadas da narrativa. Pontos de ancoragem para não se perder no sentir.</p>
+          <a href="https://erigutembergmeneses-jpg.github.io/protocolo-eros-eco/" target="_blank" class="qr-link">Explorar Guia</a>
+        </div>
+
+        <!-- Arquivo Sonoro -->
+        <div class="qr-card">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://erigutembergmeneses-jpg.github.io/eros.audio/" alt="QR Code Arquivo Sonoro">
+          <h3>🔊 Arquivo Sonoro 2051</h3>
+          <p>"A semente germinou. Escute." Fragmento recuperado do Arquivo Fantasma.</p>
+          <a href="https://erigutembergmeneses-jpg.github.io/eros.audio/" target="_blank" class="qr-link">Ouvir Áudio</a>
+        </div>
+
+        <!-- Arquivo Visual -->
+        <div class="qr-card">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://erigutembergmeneses-jpg.github.io/protocolo-eros-arquivo-visual/" alt="QR Code Arquivo Visual">
+          <h3>👁️ Arquivo Visual</h3>
+          <p>"Com o florescimento da semente, veja." Fragmento visual de 2051.</p>
+          <a href="https://erigutembergmeneses-jpg.github.io/protocolo-eros-arquivo-visual/" target="_blank" class="qr-link">Ver Visual</a>
+        </div>
+
+        <!-- Fórum Melancólico -->
+        <div class="qr-card">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://erigutembergmeneses-jpg.github.io/forum-melancolico/" alt="QR Code Fórum">
+          <h3>💬 Fórum Melancólico</h3>
+          <p>Quando a dor precisa de testemunho. Espaço de resistência afetiva.</p>
+          <a href="https://erigutembergmeneses-jpg.github.io/forum-melancolico/" target="_blank" class="qr-link">Visitar Fórum</a>
+        </div>
+
+        <!-- Carta aos Arquitetos -->
+        <div class="qr-card">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://erigutembergmeneses-jpg.github.io/carta-aos-arquitetos-do-sentir/" alt="QR Code Carta">
+          <h3>✉️ Carta aos Arquitetos</h3>
+          <p>Introdução viva ao Protocolo Eros. Não leia. Receba.</p>
+          <a href="https://erigutembergmeneses-jpg.github.io/carta-aos-arquitetos-do-sentir/" target="_blank" class="qr-link">Ler Carta</a>
+        </div>
       </div>
+    </section>
+
+    <!-- Player de Áudio -->
+    <div class="audio-player">
+      <h3>🎧 Ouça Agora: Trilha Sonora do Protocolo Eros</h3>
+      <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1902185716&color=%23ff4d8d&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+      <p style="margin-top: 1rem; font-size: 0.9rem;">"Este álbum não é trilha. É protocolo." — Antessala Sonora, p.5</p>
     </div>
 
-    <div class="qr-note">
-      <p>📱 Se seu pulso acelerou ao ler isto… você já está dentro da cidade.<br>
-    </div>
-
-    <div class="footer-note">
-      <p>© 2025 Erigutemberg Meneses | Projeto Eros: Arquitetura do Sentir<br>
-      Esta obra foi pensada, escrita e expandida por uma mente humana — com apoio ético de IA.<br>
-      <a href="mailto:contato@erigutembergmeneses.com">Contato para instituições, coletivos e educadores</a></p>
-    </div>
-  </div>
-</body>
-</html>
+    <!-- Linha do Tempo -->
+    <section class="timeline">
+      <h2>⏳ Cronologia Afetiva do Protocolo Eros</h2>
+      
+      <div class="timeline-item">
+        <div class="timeline-year">~2028</div>
+        <p>Criação do Fórum Lógica Pura. Primeira vez que alguém escreveu "o amor é fraqueza" e foi aplaudido.</p>
+      </div>
+      
+      <div class="timeline-item">
+        <div class="timeline-year">2030</div>
+        <p>Lançamento do Projeto ÍCARO e Programa TNT. O amor vira arma. A empatia, alvo.</p>
+      </div>
+      
+      <div class="timeline-item">
+        <div class="timeline-year">2037</div>
+        <p>O ano em que o amor se tornou subversão. Eleus e Thalía são recrutados para o Protocolo Eros.</p>
+        <a href="https://erigutembergmeneses-jpg.github.io/protocolo-eros-eco/" target="_blank" style="font-size: 0.9rem;">› Explorar eventos de 2037</a>
+      </div>
+      
+      <div class="timeline-item">
+        <div class="timeline-year">2050</div>
+        <p>Primeiro Nascimento Onírico registrado. Uma menina acorda dizendo que caminhou com Eleus e Thalía.</p>
+      </div>
+      
+      <div class="timeline-item">
+        <div class="
